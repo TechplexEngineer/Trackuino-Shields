@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -11048,6 +11048,20 @@ distributor RS 112-3794</description>
 </library>
 <library name="First">
 <packages>
+<package name="TO220-3">
+<pad name="1" x="-2.89" y="0" drill="0.8" shape="square"/>
+<pad name="2" x="0" y="0" drill="0.8"/>
+<pad name="3" x="2.89" y="0" drill="0.8"/>
+<wire x1="-4" y1="3" x2="4" y2="3" width="0.127" layer="21"/>
+<wire x1="-4" y1="3" x2="-4" y2="2" width="0.127" layer="21"/>
+<wire x1="-4" y1="2" x2="-4" y2="-2" width="0.127" layer="21"/>
+<wire x1="-4" y1="-2" x2="4" y2="-2" width="0.127" layer="21"/>
+<wire x1="4" y1="-2" x2="4" y2="2" width="0.127" layer="21"/>
+<text x="-4" y="3.5" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="-4" y="-3.5" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+<wire x1="4" y1="2" x2="4" y2="3" width="0.127" layer="21"/>
+<wire x1="-4" y1="2" x2="4" y2="2" width="0.127" layer="21"/>
+</package>
 <package name="HVMDIP">
 <pad name="S" x="-2.54" y="7.62" drill="0.8" shape="square"/>
 <pad name="G" x="0" y="7.62" drill="0.8" shape="square"/>
@@ -11065,22 +11079,23 @@ distributor RS 112-3794</description>
 <text x="-2.54" y="2.54" size="0.508" layer="27" font="vector">&gt;VALUE</text>
 <wire x1="-1.5875" y1="0" x2="-0.9525" y2="0" width="0.127" layer="21"/>
 </package>
-<package name="TO220-3">
-<pad name="1" x="-2.89" y="0" drill="0.8" shape="square"/>
-<pad name="2" x="0" y="0" drill="0.8"/>
-<pad name="3" x="2.89" y="0" drill="0.8"/>
-<wire x1="-4" y1="3" x2="4" y2="3" width="0.127" layer="21"/>
-<wire x1="-4" y1="3" x2="-4" y2="2" width="0.127" layer="21"/>
-<wire x1="-4" y1="2" x2="-4" y2="-2" width="0.127" layer="21"/>
-<wire x1="-4" y1="-2" x2="4" y2="-2" width="0.127" layer="21"/>
-<wire x1="4" y1="-2" x2="4" y2="2" width="0.127" layer="21"/>
-<text x="-4" y="3.5" size="1.27" layer="25" font="vector">&gt;NAME</text>
-<text x="-4" y="-3.5" size="1.27" layer="27" font="vector">&gt;VALUE</text>
-<wire x1="4" y1="2" x2="4" y2="3" width="0.127" layer="21"/>
-<wire x1="-4" y1="2" x2="4" y2="2" width="0.127" layer="21"/>
-</package>
 </packages>
 <symbols>
+<symbol name="AP1117">
+<description>LDO Voltage Regulator
+ LDO BI 1.0A 1.3V 12V 3.3V 3.3V FIX
+
+Fixed voltage regulator</description>
+<wire x1="-7.62" y1="-2.54" x2="7.62" y2="-2.54" width="0.4064" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="7.62" y2="10.16" width="0.4064" layer="94"/>
+<wire x1="7.62" y1="10.16" x2="-7.62" y2="10.16" width="0.4064" layer="94"/>
+<wire x1="-7.62" y1="10.16" x2="-7.62" y2="-2.54" width="0.4064" layer="94"/>
+<text x="-7.62" y="10.795" size="1.778" layer="95" ratio="10">&gt;NAME</text>
+<text x="-5.08" y="7.62" size="1.778" layer="96" ratio="10">&gt;VALUE</text>
+<pin name="VIN" x="-12.7" y="5.08" length="middle" direction="in"/>
+<pin name="VOUT" x="12.7" y="5.08" length="middle" direction="out" rot="R180"/>
+<pin name="GND" x="0" y="-7.62" length="middle" direction="pwr" rot="R90"/>
+</symbol>
 <symbol name="IRLD110">
 <wire x1="-1.27" y1="0" x2="-0.254" y2="0.381" width="0.1524" layer="94"/>
 <wire x1="-0.254" y1="0.381" x2="-0.254" y2="-0.381" width="0.1524" layer="94"/>
@@ -11122,40 +11137,8 @@ distributor RS 112-3794</description>
 <pin name="D" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
 <pin name="S" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
 </symbol>
-<symbol name="AP1117">
-<description>LDO Voltage Regulator
- LDO BI 1.0A 1.3V 12V 3.3V 3.3V FIX
-
-Fixed voltage regulator</description>
-<wire x1="-7.62" y1="-2.54" x2="7.62" y2="-2.54" width="0.4064" layer="94"/>
-<wire x1="7.62" y1="-2.54" x2="7.62" y2="10.16" width="0.4064" layer="94"/>
-<wire x1="7.62" y1="10.16" x2="-7.62" y2="10.16" width="0.4064" layer="94"/>
-<wire x1="-7.62" y1="10.16" x2="-7.62" y2="-2.54" width="0.4064" layer="94"/>
-<text x="-7.62" y="10.795" size="1.778" layer="95" ratio="10">&gt;NAME</text>
-<text x="-5.08" y="7.62" size="1.778" layer="96" ratio="10">&gt;VALUE</text>
-<pin name="VIN" x="-12.7" y="5.08" length="middle" direction="in"/>
-<pin name="VOUT" x="12.7" y="5.08" length="middle" direction="out" rot="R180"/>
-<pin name="GND" x="0" y="-7.62" length="middle" direction="pwr" rot="R90"/>
-</symbol>
 </symbols>
 <devicesets>
-<deviceset name="IRLD110">
-<gates>
-<gate name="G$1" symbol="IRLD110" x="0" y="0"/>
-</gates>
-<devices>
-<device name="IRLD110" package="HVMDIP">
-<connects>
-<connect gate="G$1" pin="D" pad="D@1 D@2"/>
-<connect gate="G$1" pin="G" pad="G"/>
-<connect gate="G$1" pin="S" pad="S"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="AP1117">
 <gates>
 <gate name="G$1" symbol="AP1117" x="0" y="0"/>
@@ -11166,6 +11149,23 @@ Fixed voltage regulator</description>
 <connect gate="G$1" pin="GND" pad="1"/>
 <connect gate="G$1" pin="VIN" pad="3"/>
 <connect gate="G$1" pin="VOUT" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="IRLD110">
+<gates>
+<gate name="G$1" symbol="IRLD110" x="0" y="0"/>
+</gates>
+<devices>
+<device name="IRLD110" package="HVMDIP">
+<connects>
+<connect gate="G$1" pin="D" pad="D@1 D@2"/>
+<connect gate="G$1" pin="G" pad="G"/>
+<connect gate="G$1" pin="S" pad="S"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -11234,7 +11234,7 @@ Fixed voltage regulator</description>
 <part name="R3" library="rcl" deviceset="R-US_" device="0207/7" value="1K"/>
 <part name="IC2" library="First" deviceset="AP1117" device=""/>
 <part name="GPS" library="trackuino" deviceset="VENUS638FLPX" device=""/>
-<part name="Q1" library="First" deviceset="IRLD110" device="IRLD110"/>
+<part name="U$1" library="First" deviceset="IRLD110" device="IRLD110"/>
 </parts>
 <sheets>
 <sheet>
@@ -11308,7 +11308,7 @@ Fixed voltage regulator</description>
 <instance part="R3" gate="G$1" x="246.38" y="60.96" rot="R90"/>
 <instance part="IC2" gate="G$1" x="30.48" y="154.94"/>
 <instance part="GPS" gate="G$1" x="106.68" y="93.98"/>
-<instance part="Q1" gate="G$1" x="231.14" y="50.8"/>
+<instance part="U$1" gate="G$1" x="231.14" y="50.8"/>
 </instances>
 <busses>
 </busses>
@@ -11406,7 +11406,7 @@ Fixed voltage regulator</description>
 <segment>
 <wire x1="231.14" y1="43.18" x2="231.14" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="GND14" gate="1" pin="GND"/>
-<pinref part="Q1" gate="G$1" pin="S"/>
+<pinref part="U$1" gate="G$1" pin="S"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="GND"/>
@@ -11671,6 +11671,7 @@ Fixed voltage regulator</description>
 <label x="215.9" y="48.26" size="1.778" layer="95"/>
 <wire x1="30.48" y1="40.64" x2="215.9" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="40.64" x2="215.9" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="G"/>
 </segment>
 </net>
 <net name="D10" class="0">
@@ -11724,7 +11725,7 @@ Fixed voltage regulator</description>
 <wire x1="231.14" y1="55.88" x2="246.38" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="X4" gate="-2" pin="KL"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<pinref part="Q1" gate="G$1" pin="D"/>
+<pinref part="U$1" gate="G$1" pin="D"/>
 <junction x="231.14" y="55.88"/>
 </segment>
 </net>
