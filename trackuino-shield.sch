@@ -11234,7 +11234,7 @@ Fixed voltage regulator</description>
 <part name="R3" library="rcl" deviceset="R-US_" device="0207/7" value="1K"/>
 <part name="IC2" library="First" deviceset="AP1117" device=""/>
 <part name="GPS" library="trackuino" deviceset="VENUS638FLPX" device=""/>
-<part name="U$1" library="First" deviceset="IRLD110" device="IRLD110"/>
+<part name="Q1" library="First" deviceset="IRLD110" device="IRLD110"/>
 </parts>
 <sheets>
 <sheet>
@@ -11308,7 +11308,7 @@ Fixed voltage regulator</description>
 <instance part="R3" gate="G$1" x="246.38" y="60.96" rot="R90"/>
 <instance part="IC2" gate="G$1" x="30.48" y="154.94"/>
 <instance part="GPS" gate="G$1" x="106.68" y="93.98"/>
-<instance part="U$1" gate="G$1" x="231.14" y="50.8"/>
+<instance part="Q1" gate="G$1" x="231.14" y="50.8"/>
 </instances>
 <busses>
 </busses>
@@ -11406,7 +11406,7 @@ Fixed voltage regulator</description>
 <segment>
 <wire x1="231.14" y1="43.18" x2="231.14" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="GND14" gate="1" pin="GND"/>
-<pinref part="U$1" gate="G$1" pin="S"/>
+<pinref part="Q1" gate="G$1" pin="S"/>
 </segment>
 <segment>
 <pinref part="IC2" gate="G$1" pin="GND"/>
@@ -11671,7 +11671,7 @@ Fixed voltage regulator</description>
 <label x="215.9" y="48.26" size="1.778" layer="95"/>
 <wire x1="30.48" y1="40.64" x2="215.9" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="40.64" x2="215.9" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="G"/>
+<pinref part="Q1" gate="G$1" pin="G"/>
 </segment>
 </net>
 <net name="D10" class="0">
@@ -11725,7 +11725,7 @@ Fixed voltage regulator</description>
 <wire x1="231.14" y1="55.88" x2="246.38" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="X4" gate="-2" pin="KL"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<pinref part="U$1" gate="G$1" pin="D"/>
+<pinref part="Q1" gate="G$1" pin="D"/>
 <junction x="231.14" y="55.88"/>
 </segment>
 </net>
