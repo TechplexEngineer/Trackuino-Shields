@@ -6,9 +6,9 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="25" altunitdist="mil" altunit="mil"/>
+<grid distance="0.025" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="yes"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="yes"/>
@@ -26,14 +26,14 @@
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
 <layer number="20" name="Dimension" color="14" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="16" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="16" fill="1" visible="no" active="yes"/>
 <layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
@@ -51,14 +51,14 @@
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
-<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="yes"/>
-<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="6" fill="1" visible="no" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -132,7 +132,7 @@
 <wire x1="0" y1="0" x2="67.31" y2="0" width="0.2032" layer="20"/>
 <text x="11.176" y="21.082" size="1.27" layer="25" font="vector" rot="R90">VIN+</text>
 <text x="39.37" y="31.75" size="1.016" layer="25" font="vector" rot="R90">RESET</text>
-<text x="52.07" y="6.35" size="2.54" layer="48" font="vector" rot="MR90">Trackuino Shield 2.2</text>
+<text x="52.07" y="6.35" size="2.54" layer="26" font="vector" rot="MR90">Trackuino THT 2.2+</text>
 <text x="49.53" y="6.35" size="1.27" layer="48" font="vector" rot="MR90">http://trackuino.org</text>
 <text x="11.176" y="25.908" size="1.27" layer="25" rot="R90">GND</text>
 <text x="11.176" y="11.43" size="1.27" layer="25" font="vector" rot="R90">+ BUZZ -</text>
@@ -140,8 +140,7 @@
 <text x="16.51" y="2.54" size="1.27" layer="25" font="vector">TMP32-ext</text>
 <text x="45.72" y="6.35" size="1.27" layer="48" font="vector" rot="MR90">5V: bridge J6, J8; buffer on IC4</text>
 <text x="43.18" y="6.35" size="1.27" layer="48" font="vector" rot="MR90">3.3V: bridge J7; buffers on IC3, IC5</text>
-<rectangle x1="21.59" y1="8.89" x2="34.29" y2="19.05" layer="30"/>
-<rectangle x1="21.59" y1="8.89" x2="34.29" y2="19.05" layer="29"/>
+<rectangle x1="1.27" y1="35.56" x2="24.13" y2="45.72" layer="26"/>
 </plain>
 <libraries>
 <library name="rcl">
@@ -592,6 +591,48 @@ distributor RS 112-3794</description>
 </package>
 </packages>
 </library>
+<library name="tr">
+<packages>
+<package name="FLAGS_SM">
+<text x="3.81" y="1.27" size="1.778" layer="22" font="fixed" ratio="15" rot="MR0">MAINE</text>
+<wire x1="4.445" y1="3.175" x2="-4.445" y2="3.175" width="0.127" layer="22"/>
+<wire x1="-4.445" y1="3.175" x2="-4.445" y2="0.635" width="0.127" layer="22"/>
+<wire x1="-4.445" y1="0.635" x2="4.445" y2="0.635" width="0.127" layer="22"/>
+<wire x1="4.445" y1="0.635" x2="4.445" y2="3.175" width="0.127" layer="22"/>
+<wire x1="-4.445" y1="0" x2="4.445" y2="0" width="0.127" layer="22"/>
+<wire x1="4.445" y1="0" x2="4.445" y2="-8.89" width="0.127" layer="22"/>
+<wire x1="4.445" y1="-8.89" x2="1.27" y2="-8.89" width="0.127" layer="22"/>
+<wire x1="-0.1905" y1="-8.89" x2="-4.445" y2="-8.89" width="0.127" layer="22"/>
+<wire x1="-4.445" y1="-8.89" x2="-4.445" y2="0" width="0.127" layer="22"/>
+<wire x1="-4.445" y1="-9.525" x2="0.381" y2="-9.525" width="0.127" layer="22"/>
+<wire x1="1.27" y1="-9.525" x2="4.445" y2="-9.525" width="0.127" layer="22"/>
+<wire x1="4.445" y1="-9.525" x2="3.35645625" y2="-10.069271875" width="0.127" layer="22"/>
+<wire x1="3.35645625" y1="-10.069271875" x2="0.757525" y2="-11.942475" width="0.127" layer="22" curve="18.434936"/>
+<wire x1="0.757525" y1="-11.942475" x2="0" y2="-12.7" width="0.127" layer="22"/>
+<wire x1="0" y1="-12.7" x2="-0.757525" y2="-11.942475" width="0.127" layer="22"/>
+<wire x1="-0.757525" y1="-11.942475" x2="-3.35645625" y2="-10.069271875" width="0.127" layer="22" curve="18.434941"/>
+<wire x1="-3.35645625" y1="-10.069271875" x2="-4.445" y2="-9.525" width="0.127" layer="22"/>
+<wire x1="-3.81" y1="-1.27" x2="-3.567453125" y2="-1.512546875" width="0.127" layer="22"/>
+<wire x1="-3.567453125" y1="-1.512546875" x2="-1.905" y2="-2.54" width="0.127" layer="22" curve="26.565078"/>
+<wire x1="1.905" y1="-1.27" x2="2.147546875" y2="-1.512546875" width="0.127" layer="22"/>
+<wire x1="2.147546875" y1="-1.512546875" x2="3.81" y2="-2.54" width="0.127" layer="22" curve="26.565078"/>
+<wire x1="-1.905" y1="-7.62" x2="-1.905" y2="-2.54" width="0.127" layer="22"/>
+<wire x1="-3.81" y1="-1.27" x2="-3.81" y2="-6.35" width="0.127" layer="22"/>
+<wire x1="1.905" y1="-1.27" x2="1.905" y2="-6.35" width="0.127" layer="22"/>
+<wire x1="3.81" y1="-2.54" x2="3.81" y2="-7.62" width="0.127" layer="22"/>
+<wire x1="-1.27" y1="-0.635" x2="-1.27" y2="-6.985" width="0.127" layer="22"/>
+<wire x1="1.27" y1="-2.54" x2="1.27" y2="-10.16" width="0.127" layer="22"/>
+<wire x1="-3.81" y1="-6.35" x2="-3.567453125" y2="-6.592546875" width="0.127" layer="22"/>
+<wire x1="-3.567453125" y1="-6.592546875" x2="-1.905" y2="-7.62" width="0.127" layer="22" curve="26.565078"/>
+<wire x1="3.81" y1="-7.62" x2="2.147546875" y2="-6.592546875" width="0.127" layer="22" curve="-26.565051"/>
+<wire x1="2.147546875" y1="-6.592546875" x2="1.905" y2="-6.35" width="0.127" layer="22"/>
+<wire x1="-1.27" y1="-6.985" x2="-1.046775" y2="-7.505859375" width="0.127" layer="22"/>
+<wire x1="-1.046775" y1="-7.505859375" x2="1.27" y2="-10.16" width="0.127" layer="22" curve="35.837682"/>
+<wire x1="-1.27" y1="-0.635" x2="-0.272771875" y2="-1.632228125" width="0.127" layer="22"/>
+<wire x1="-0.272771875" y1="-1.632228125" x2="1.27" y2="-2.54" width="0.127" layer="22" curve="29.05459"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -613,34 +654,37 @@ distributor RS 112-3794</description>
 <class number="6" name="HIGH Current" width="2.54" drill="0">
 </class>
 </classes>
-<designrules name="SparkFun">
-<description language="en">&lt;b&gt;SparkFun EAGLE Design Rules&lt;/b&gt;
+<designrules name="LaenPCBOrder">
+<description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
-The default Design Rules have been set to cover
-a wide range of applications. Your particular design
-may have different requirements, so please make the
-necessary adjustments and save your customized
-design rules under a new name.</description>
+Die Standard-Design-Rules sind so gewählt, dass sie für 
+die meisten Anwendungen passen. Sollte ihre Platine 
+besondere Anforderungen haben, treffen Sie die erforderlichen
+Einstellungen hier und speichern die Design Rules unter 
+einem neuen Namen ab.</description>
+<description language="en">&lt;b&gt;Laen's PCB Order Design Rules&lt;/b&gt;
+&lt;p&gt;
+Please make sure your boards conform to these design rules.</description>
 <param name="layerSetup" value="(1*16)"/>
-<param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
-<param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
-<param name="mdWireWire" value="8mil"/>
-<param name="mdWirePad" value="8mil"/>
-<param name="mdWireVia" value="8mil"/>
-<param name="mdPadPad" value="8mil"/>
-<param name="mdPadVia" value="8mil"/>
-<param name="mdViaVia" value="8mil"/>
-<param name="mdSmdPad" value="8mil"/>
-<param name="mdSmdVia" value="8mil"/>
-<param name="mdSmdSmd" value="8mil"/>
+<param name="mtCopper" value="0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm 0.0356mm"/>
+<param name="mtIsolate" value="1.5011mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm 0.1499mm 0.2007mm"/>
+<param name="mdWireWire" value="6mil"/>
+<param name="mdWirePad" value="6mil"/>
+<param name="mdWireVia" value="6mil"/>
+<param name="mdPadPad" value="6mil"/>
+<param name="mdPadVia" value="6mil"/>
+<param name="mdViaVia" value="6mil"/>
+<param name="mdSmdPad" value="6mil"/>
+<param name="mdSmdVia" value="6mil"/>
+<param name="mdSmdSmd" value="6mil"/>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="10mil"/>
-<param name="mdDrill" value="8mil"/>
+<param name="mdCopperDimension" value="15mil"/>
+<param name="mdDrill" value="6mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="8mil"/>
-<param name="msDrill" value="20mil"/>
-<param name="msMicroVia" value="9.99mm"/>
+<param name="msWidth" value="6mil"/>
+<param name="msDrill" value="13mil"/>
+<param name="msMicroVia" value="13mil"/>
 <param name="msBlindViaRatio" value="0.5"/>
 <param name="rvPadTop" value="0.25"/>
 <param name="rvPadInner" value="0.25"/>
@@ -649,15 +693,15 @@ design rules under a new name.</description>
 <param name="rvViaInner" value="0.25"/>
 <param name="rvMicroViaOuter" value="0.25"/>
 <param name="rvMicroViaInner" value="0.25"/>
-<param name="rlMinPadTop" value="12mil"/>
+<param name="rlMinPadTop" value="7mil"/>
 <param name="rlMaxPadTop" value="20mil"/>
-<param name="rlMinPadInner" value="10mil"/>
+<param name="rlMinPadInner" value="7mil"/>
 <param name="rlMaxPadInner" value="20mil"/>
-<param name="rlMinPadBottom" value="12mil"/>
+<param name="rlMinPadBottom" value="7mil"/>
 <param name="rlMaxPadBottom" value="20mil"/>
-<param name="rlMinViaOuter" value="10mil"/>
+<param name="rlMinViaOuter" value="7mil"/>
 <param name="rlMaxViaOuter" value="20mil"/>
-<param name="rlMinViaInner" value="10mil"/>
+<param name="rlMinViaInner" value="7mil"/>
 <param name="rlMaxViaInner" value="20mil"/>
 <param name="rlMinMicroViaOuter" value="4mil"/>
 <param name="rlMaxMicroViaOuter" value="20mil"/>
@@ -670,11 +714,11 @@ design rules under a new name.</description>
 <param name="psElongationOffset" value="100"/>
 <param name="mvStopFrame" value="1"/>
 <param name="mvCreamFrame" value="0"/>
-<param name="mlMinStopFrame" value="4mil"/>
-<param name="mlMaxStopFrame" value="4mil"/>
+<param name="mlMinStopFrame" value="3mil"/>
+<param name="mlMaxStopFrame" value="3mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="25mil"/>
+<param name="mlViaStopLimit" value="0mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -859,13 +903,17 @@ design rules under a new name.</description>
 <attribute name="NAME" x="17.78" y="14.605" size="1.27" layer="25" font="vector"/>
 <attribute name="VALUE" x="17.78" y="12.7" size="0.508" layer="27" font="vector"/>
 </element>
-<element name="M1" library="trackuino" package="HX1" value="HX1" x="48.26" y="10.16" rot="R90"/>
+<element name="M1" library="trackuino" package="HX1" value="HX1" x="48.26" y="10.16" smashed="yes" rot="R90">
+<attribute name="NAME" x="57.15" y="44.45" size="1.27" layer="25" font="vector" rot="R90"/>
+<attribute name="VALUE" x="57.15" y="20.32" size="1.27" layer="25" font="vector" rot="R90"/>
+</element>
 <element name="X1" library="con-coax" package="BU-SMA-V" value="BU-SMA-V" x="62.23" y="13.97">
 <attribute name="OC_NEWARK" value="unknown" x="62.23" y="13.97" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
 <attribute name="MPN" value="" x="62.23" y="13.97" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
 <attribute name="MF" value="" x="62.23" y="13.97" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="62.23" y="13.97" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
 </element>
+<element name="U$1" library="tr" package="FLAGS_SM" value="" x="41.275" y="27.94"/>
 </elements>
 <signals>
 <signal name="GND">
