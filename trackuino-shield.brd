@@ -6,9 +6,9 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.025" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.0125" altunitdist="inch" altunit="inch"/>
+<grid distance="25" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="12.5" altunitdist="mil" altunit="mil"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="yes"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="yes"/>
@@ -26,13 +26,13 @@
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="14" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="16" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="16" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
@@ -1012,9 +1012,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="26.67" y1="12.7" x2="34.29" y2="12.7" width="0.762" layer="1"/>
 <via x="34.29" y="12.7" extent="1-16" drill="0.6" shape="square"/>
 <wire x1="34.29" y1="12.7" x2="40.64" y2="12.7" width="0.762" layer="16"/>
-<wire x1="40.64" y1="12.7" x2="41.91" y2="11.43" width="0.762" layer="1"/>
-<wire x1="41.91" y1="11.43" x2="41.91" y2="2.54" width="0.762" layer="1"/>
-<via x="40.64" y="12.7" extent="1-16" drill="0.6" shape="square"/>
 <wire x1="25.05" y1="23.78" x2="25.05" y2="27.02" width="0.762" layer="1"/>
 <contactref element="R1" pad="2"/>
 <contactref element="X2" pad="1"/>
@@ -1035,6 +1032,9 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="18.415" y1="28.575" x2="19.05" y2="28.575" width="0.8128" layer="1"/>
 <wire x1="25.05" y1="27.02" x2="23.495" y2="28.575" width="0.8128" layer="1"/>
 <wire x1="23.495" y1="28.575" x2="19.05" y2="28.575" width="0.8128" layer="1"/>
+<wire x1="40.64" y1="12.7" x2="41.91" y2="11.43" width="0.762" layer="16"/>
+<via x="41.91" y="11.43" extent="1-16" drill="0.6" shape="square"/>
+<wire x1="41.91" y1="11.43" x2="41.91" y2="2.54" width="0.762" layer="1"/>
 </signal>
 <signal name="A0">
 <contactref element="J2" pad="6"/>
